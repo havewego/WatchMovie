@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="dao.MessMapper">
+ 	<insert id="insertMess" parameterType="pojo.Mess">
+ 		insert into mess(text,userid,movieid) values(#{text},#{userid},#{movieid});
+ 	</insert>
+ 	
+ 	<delete id="deleteMess" parameterType="int">
+ 		delete from mess where id=#{id};
+ 	</delete>
+ 	
+ 	<select id="getMessCount" parameterType="int" resultType="java.lang.Integer">
+ 		select count(*) from mess where movieid=#{movieid};
+ 	</select>
+ 	<select id="getMess" resultType="pojo.Mess">
+ 		select * from mess where movieid=#{movieid} order by id desc limit #{page},#{sum};
+ 	</select>
+ 	
+ 	<select id="getMessByUserCount" parameterType="int" resultType="java.lang.Integer">
+ 		select count(*) from mess where userid=#{userid};
+ 	</select>
+ 	<select id="getMessByUser" resultType="pojo.Mess">
+ 		select * from mess where userid=#{userid} order by id desc limit #{page},#{sum};
+ 	</select>
+ 	
+ 	<select id="getAllMessCount" resultType="java.lang.Integer">
+ 		select count(*) from mess;
+ 	</select>
+ 	<select id="getAllMess" resultType="pojo.Mess">
+ 		select * from mess order by id desc limit #{page},#{sum};
+ 	</select>
+ 	
+ 	<select id="getMessById" parameterType="int" resultType="pojo.Mess">
+ 		select * from mess where id=#{id};
+ 	</select>
+ </mapper>

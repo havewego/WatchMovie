@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="dao.AdminMapper">
+ 	<select id="getAdmin" parameterType="int" resultType="pojo.Admin">
+ 		select * from admin where id=#{id};
+ 	</select>
+ 	
+ 	<insert id="insertAdmin" parameterType="pojo.Admin">
+ 		insert into admin(id,pwd,email) values(#{id},#{pwd},#{email});
+ 	</insert>
+ 	
+ 	<select id="getAllAdminCount" resultType="java.lang.Integer">
+ 		select count(*) from admin 
+ 	</select>
+ 	<select id="getAllAdmin" resultType="pojo.Admin">
+ 		select * from admin order by id desc limit #{page},#{sum};
+ 	</select>
+ </mapper>

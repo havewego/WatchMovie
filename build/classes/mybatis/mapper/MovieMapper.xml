@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="dao.MovieMapper">
+ 	<select id="getMovieById" parameterType="int" resultType="pojo.Movie">
+ 		select * from movie where id=#{id};
+ 	</select>
+ 
+ 	<select id="getAll" resultType="java.lang.Integer">
+ 		select count(*) from movie;
+ 	</select>
+ 	
+ 	<select id="getAllMovie" resultType="pojo.Movie">
+ 		select * from movie order by id desc limit #{page},#{sum};
+ 	</select>
+ 	
+ 	<select id="getAllMovieRank" resultType="pojo.Movie">
+ 		select * from movie order by times desc limit #{page},#{sum};
+ 	</select>
+ 	
+ 	<select id="getMovies" parameterType="java.lang.String" resultType="java.lang.Integer">
+ 		select count(*) from movie where name like '%${name}%';
+ 	</select>
+ 	
+ 	<select id="getMovieByName" resultType="pojo.Movie">
+ 		select * from movie where name like '%${name}%' order by id desc limit #{page},#{sum};
+ 	</select>
+ 	
+ 	<select id="getCountByType" parameterType="java.lang.String" resultType="java.lang.Integer">
+ 		select count(*) from movie where type=#{type};
+ 	</select>
+ 	
+ 	<select id="getMovieByType" resultType="pojo.Movie">
+ 		select * from movie where type=#{type} order by id desc limit #{page},#{sum};
+ 	</select>
+ 	
+ 	<insert id="insertMovie" parameterType="pojo.Movie">
+ 		insert into movie(name,pic,url,type,introduction) values(#{name},#{pic},#{url},#{type},#{introduction});
+ 	</insert>
+ 	
+ 	<update id="updateMovie" parameterType="pojo.Movie">
+ 		update movie set name=#{name},pic=#{pic},url=#{url},type=#{type},introduction=#{introduction} where id=#{id};
+ 	</update>
+ 	
+ 	<update id="updatetimes">
+ 		update movie set times=#{times} where id=#{id};
+ 	</update>
+ </mapper>
