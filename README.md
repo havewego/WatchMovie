@@ -18,7 +18,7 @@
 * 动态sql，事务管理
 # 项目展示
 * 首页
-![首页](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/首页.bmp)
+![首页](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片1.png)
 *
 *
 *
