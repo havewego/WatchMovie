@@ -19,6 +19,9 @@
 # 项目展示
 * 首页
 ![首页](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片1.png)
+* 登陆注册
+![登陆](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片2.png)
+![注册](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片3.png)
 *
 *
 *
