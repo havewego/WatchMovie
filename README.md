@@ -31,5 +31,7 @@
 ![评论](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片7.png)
 * 管理员登陆
 ![管理员登陆](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片8.png)
+* 管理员首页
+![管理员首页](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片10.png)
 * 更新电影
 ![更新电影](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片12.png)
