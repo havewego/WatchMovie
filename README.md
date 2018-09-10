@@ -24,8 +24,7 @@
 ![登陆](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片2.png)
 
 ![注册](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片3.png)
-*
-*
-*
-*
-*
+* 电影信息
+![电影信息](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片4.png)
+* 观看电影
+![观看电影](https://github.com/havewego/WatchMovie/blob/master/WebContent/WatchMovie/image/图片5.png)
