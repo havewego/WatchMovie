@@ -16,6 +16,8 @@
 		<property name="jdbcUrl" value="${jdbc.url}"></property>
 		<property name="user" value="${jdbc.username}"></property>
 		<property name="password" value="${jdbc.password}"></property>
+		<property name="maxPoolSize" value="${jdbc.maxPoolSize}"></property>
+		<property name="initialPoolSize" value="${jdbc.initPoolSize}"></property>
 	</bean>
 	<!-- 事务管理器 -->
 	<bean id="dtm" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
