@@ -14,4 +14,4 @@
 # 相关技术
 * SSM框架
 * Java mail邮箱验证
-* Ajax
+* Ajax与json
