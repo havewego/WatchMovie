@@ -33,7 +33,6 @@ public class MessController {
 			e.getMessage();
 			return "error";
 		}
-		//int movieid = (int) session.getAttribute("movieid");
 		Mess mess = new Mess();
 		mess.setMovieid(movieid);
 		mess.setUserid(userid);
@@ -50,8 +49,7 @@ public class MessController {
 	@ResponseBody
 	public String showmoviecontent(int page,int movieid) {
 		System.out.println(page);
-		//int userid = (int) session.getAttribute("userid");
-		//int movieid = (int) session.getAttribute("movieid");
+		System.out.println(movieid+"///////////////");
 		List<Mess> messes = userservice.getMessByMovie(movieid, page);
 		int count = userservice.getMessCount(movieid);
 		int pages;//页数
@@ -106,12 +104,10 @@ public class MessController {
             pages = count / Mess.PAGE_SIZE + 1; // 对总页数赋值
         }
 		StringBuffer sb = new StringBuffer();
-		//sb.append("<table class=\"table table-striped\"><thead><tr><th>电影ID</th><th>评论详情</th><th>用户ID</th></tr></thead><tbody>");
 		sb.append("<table class=\"table table-striped\"><thead><tr><th>电影名字</th><th>评论详情</th><th>用户ID</th></tr></thead><tbody>");
 		for (Mess mess : messes) {
 			int movieid = mess.getMovieid();
 			Movie movie = userservice.getMovieById(movieid);
-			//sb.append("<tr><td>"+mess.getMovieid()+"</td><td>"+mess.getText()+"</td><td>"+mess.getUserid()+"</td></tr>");
 			sb.append("<tr><td>"+movie.getName()+"</td><td>"+mess.getText()+"</td><td>"+mess.getUserid()+"</td></tr>");
 		}
 		sb.append("</tbody></table>");
@@ -126,7 +122,6 @@ public class MessController {
 		}
 		sb.append("</div></center>");
 		return sb.toString();
-		
 	}
 	
 }

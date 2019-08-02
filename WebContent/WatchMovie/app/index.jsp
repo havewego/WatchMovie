@@ -92,6 +92,9 @@
 	}
     	
     	function searchtype() {
+    		if($("#type").val()=="audi"){
+    			return;
+    		}
 			$.ajax({
 				type:"post",
 				url:"${pageContext.request.contextPath }/searchtype",
@@ -322,7 +325,7 @@
 						</div>
 						<ul>
 							<li>
-								<select id="type">
+								<select id="type" >
 									<option value="audi">Type</option>
 									<option value="动作">动作</option>
 									<option value="喜剧">喜剧</option>

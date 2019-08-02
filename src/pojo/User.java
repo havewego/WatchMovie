@@ -4,6 +4,7 @@ public class User {
 	public static final int PAGE_SIZE = 8; // Ã¿Ò³¼ÇÂ¼Êý
 	private int id;
 	private String name;
+	
 	private String pwd;
 	private String email;
 	private String phone;

@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
@@ -33,7 +34,6 @@ public class AdminController {
 	
 	/**
 	 * 生成随机数
-	 * 
 	 * @param num 位数
 	 * @return
 	 */
@@ -172,7 +172,6 @@ public class AdminController {
 				return "admin/UploadMovie";
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.getMessage();
 			return "admin/Index";
 		}
